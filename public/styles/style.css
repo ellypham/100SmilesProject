@@ -22,7 +22,7 @@ a:focus {
 a:active, a:hover {
   outline: 0; }
 
-h1 {
+h1, .header_banner_content h1, #about h1, #quote .container h1, #galleryTitle h1, #progress h1, #progress .progress_container .progress_box h1, #getInvolved h1, #contact h1 {
   font-size: 2em; }
 
 abbr[title] {
@@ -75,20 +75,20 @@ fieldset {
   margin: 0 2px;
   padding: .35em .625em .75em; }
 
-button, input, select, textarea {
+button, .header_banner_content button, #cta .cta_container .cta_blocks button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
   margin: 0; }
 
-button, input {
+button, .header_banner_content button, #cta .cta_container .cta_blocks button, input {
   line-height: normal; }
 
-button, html input[type=button],
+button, .header_banner_content button, #cta .cta_container .cta_blocks button, html input[type=button],
 input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer; }
 
-button[disabled], input[disabled] {
+button[disabled], #cta .cta_container .cta_blocks button[disabled], input[disabled] {
   cursor: default; }
 
 input[type=checkbox], input[type=radio] {
@@ -115,7 +115,7 @@ table {
 body, figure {
   margin: 0; }
 
-legend, button::-moz-focus-inner, input::-moz-focus-inner {
+legend, button::-moz-focus-inner, .header_banner_content button::-moz-focus-inner, #cta .cta_container .cta_blocks button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
@@ -134,48 +134,56 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 html {
   font-size: 62.5%; }
 
-h1,
+ul {
+  padding: 0px; }
+
+h1, .header_banner_content h1, #about h1, #quote .container h1, #galleryTitle h1, #progress h1, #progress .progress_container .progress_box h1, #getInvolved h1, #contact h1,
 h2,
 h3,
+#cta .cta_container .cta_blocks h3,
 h4,
-h5,
-p {
+h5 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300; }
+
+p, .header_banner_content p, #about p, #cta .cta_container .cta_blocks p, #progress .progress_container .progress_box p, #getInvolved p,
+a {
   margin: 0;
-  padding: 0;
-  font-family: 'Julius Sans One', sans-serif; }
+  padding: 10px 0 10px 0;
+  font-family: "Didact Gothic", sans-serif;
+  color: #686868;
+  font-size: 1.4rem;
+  line-height: 2.5rem; }
 
-h1, h2, h3 {
-  color: #EF4F9D; }
-
-h2 {
-  font-size: 3em;
-  margin: 20px 0 20px 0; }
-
-p {
-  font-size: 20px;
-  line-height: 30px; }
-
-.header_banner_content button {
+button, .header_banner_content button, #cta .cta_container .cta_blocks button {
   background-color: #07B9BB;
-  border: none;
-  color: white; }
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 10px;
+  font-family: "Didact Gothic", sans-serif; }
+
+.header_banner_content button, .header_banner_content #cta .cta_container .cta_blocks button, #cta .cta_container .cta_blocks .header_banner_content button {
+  border: 2px solid #ffffff; }
 
 .nav_bar {
-  margin-top: 10%; }
+  margin-top: 5%; }
 
 li {
   list-style: none;
-  padding: 0 10px 0 10px; }
+  padding: 0 15px 0 15px;
+  display: inline-block; }
 
 li a {
-  color: #EF4F9D; }
+  color: #EF4F9D;
+  display: inline-block;
+  font-size: 1.6rem; }
 
 li a:hover {
   color: #07B9BB;
   text-decoration: none; }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto; }
 
 .logo img {
@@ -189,12 +197,8 @@ li a:hover {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
-
-.nav_bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+          justify-content: space-between;
+  padding-bottom: 10px; }
 
 .header_banner {
   display: -webkit-box;
@@ -203,8 +207,7 @@ li a:hover {
   background: url(../../images/april_group.jpg) no-repeat center;
   background-size: cover;
   max-width: 100%;
-  padding-top: 10%;
-  height: 600px; }
+  padding-top: 10%; }
 
 .logo_banner_overlay {
   margin: 0 auto; }
@@ -214,8 +217,198 @@ li a:hover {
   margin: 0 auto;
   padding: 2%;
   text-align: left;
-  margin-bottom: 15%;
+  margin-bottom: 10%;
   background-color: rgba(7, 2, 2, 0.5); }
+  .header_banner_content h1, .header_banner_content #about h1, #about .header_banner_content h1, .header_banner_content #quote .container h1, #quote .container .header_banner_content h1, .header_banner_content #galleryTitle h1, #galleryTitle .header_banner_content h1, .header_banner_content #progress h1, #progress .header_banner_content h1, .header_banner_content #progress .progress_container .progress_box h1, #progress .progress_container .progress_box .header_banner_content h1, .header_banner_content #getInvolved h1, #getInvolved .header_banner_content h1, .header_banner_content #contact h1, #contact .header_banner_content h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    margin-top: 0px; }
+  .header_banner_content p, .header_banner_content #about p, #about .header_banner_content p, .header_banner_content #cta .cta_container .cta_blocks p, #cta .cta_container .cta_blocks .header_banner_content p, .header_banner_content #progress .progress_container .progress_box p, #progress .progress_container .progress_box .header_banner_content p, .header_banner_content #getInvolved p, #getInvolved .header_banner_content p {
+    color: #ffffff;
+    padding: 10px 0 10px 0; }
 
-.header_banner_content h1, p {
-  color: white; }
+#about {
+  padding: 30px 0 30px 0; }
+  #about h1, #about #quote .container h1, #quote .container #about h1, #about #progress .progress_container .progress_box h1, #progress .progress_container .progress_box #about h1 {
+    color: #07B9BB;
+    font-family: "Ubuntu", sans-serif;
+    text-align: center; }
+  #about p, #about #cta .cta_container .cta_blocks p, #cta .cta_container .cta_blocks #about p, #about #progress .progress_container .progress_box p, #progress .progress_container .progress_box #about p {
+    text-align: center; }
+
+#cta {
+  background-color: #EFEFEF; }
+  #cta .cta_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 50px 0 50px 0; }
+    #cta .cta_container .cta_blocks {
+      text-align: center;
+      max-width: 25%; }
+      #cta .cta_container .cta_blocks img {
+        width: 50px; }
+      #cta .cta_container .cta_blocks h3 {
+        font-size: 1.8rem;
+        color: #07B9BB; }
+      #cta .cta_container .cta_blocks button {
+        border: none;
+        width: 90px; }
+
+#quote {
+  background-color: #F17CB4; }
+  #quote .container {
+    padding: 50px 0 50px 0; }
+    #quote .container h1, #quote .container #progress .progress_container .progress_box h1, #progress .progress_container .progress_box #quote .container h1 {
+      text-align: center;
+      color: #ffffff;
+      font-size: 3rem;
+      text-transform: uppercase; }
+    #quote .container p, #quote .container #cta .cta_container .cta_blocks p, #cta .cta_container .cta_blocks #quote .container p, #quote .container #progress .progress_container .progress_box p, #progress .progress_container .progress_box #quote .container p {
+      padding-top: 20px;
+      font-size: 2rem;
+      text-align: center;
+      color: white; }
+
+#galleryTitle #quote .container h1, #quote .container #galleryTitle h1, #galleryTitle h1, #galleryTitle #progress .progress_container .progress_box h1, #progress .progress_container .progress_box #galleryTitle h1 {
+  color: #07B9BB;
+  text-align: center;
+  padding: 40px 0 40px 0; }
+
+#gallery .gallery_image_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  #gallery .gallery_image_container .gallery_image {
+    width: 25%;
+    height: 250px; }
+
+#gallery .gallery_image1 {
+  background: url(../../images/amanda_flores.jpg) no-repeat center;
+  background-size: cover; }
+
+#gallery .gallery_image2 {
+  background: url(../../images/balta_angie.jpg) no-repeat center top;
+  background-size: cover; }
+
+#gallery .gallery_image3 {
+  background: url(../../images/brad_fanny.jpg) no-repeat center bottom;
+  background-size: cover; }
+
+#gallery .gallery_image4 {
+  background: url(../../images/april_group.jpg) no-repeat center;
+  background-size: cover; }
+
+#gallery .gallery_image5 {
+  background: url(../../images/elly_april.jpg) no-repeat center;
+  background-size: cover; }
+
+#gallery .gallery_image6 {
+  background: url(../../images/gerry.jpg) no-repeat center;
+  background-size: cover; }
+
+#gallery .gallery_image7 {
+  background: url(../../images/jose_surf.jpg) no-repeat center;
+  background-size: cover; }
+
+#gallery .gallery_image8 {
+  background: url(../../images/surf_camp.jpg) no-repeat center;
+  background-size: cover; }
+
+#progress {
+  padding: 40px 0 40px 0; }
+  #progress #quote .container h1, #quote .container #progress h1, #progress h1, #progress .progress_container .progress_box h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #07B9BB; }
+  #progress .progress_container {
+    padding: 20px 0 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #progress .progress_container .progress_box {
+      width: 33.3%; }
+      #progress .progress_container .progress_box h1 {
+        font-size: 4.5rem;
+        color: #EF4F9D; }
+      #progress .progress_container .progress_box p {
+        font-size: 2rem;
+        text-align: center;
+        color: #07B9BB; }
+
+#getInvolved {
+  background-color: #07B9BB;
+  padding: 40px 0 40px 0; }
+  #getInvolved #quote .container h1, #quote .container #getInvolved h1, #getInvolved #progress .progress_container .progress_box h1, #progress .progress_container .progress_box #getInvolved h1, #getInvolved h1 {
+    color: #ffffff; }
+  #getInvolved #cta .cta_container .cta_blocks p, #cta .cta_container .cta_blocks #getInvolved p, #getInvolved #progress .progress_container .progress_box p, #progress .progress_container .progress_box #getInvolved p, #getInvolved p {
+    color: #ffffff; }
+  #getInvolved a {
+    color: #EF4F9D; }
+
+#contact {
+  padding: 40px 0 40px 0; }
+  #contact #quote .container h1, #quote .container #contact h1, #contact #progress .progress_container .progress_box h1, #progress .progress_container .progress_box #contact h1, #contact h1 {
+    color: #07B9BB; }
+  #contact form .input_fields {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  #contact form input {
+    width: 49%;
+    background-color: #EFEFEF;
+    color: #686868;
+    border: none;
+    margin: 15px 0 0px 0;
+    font-size: 2rem; }
+  #contact form textarea {
+    width: 100%;
+    margin-top: 15px;
+    background-color: #EFEFEF;
+    color: #686868;
+    font-size: 2rem;
+    border: none; }
+  #contact form input[type=submit] {
+    width: 20%;
+    background-color: #07B9BB;
+    color: #ffffff;
+    padding: 10px;
+    margin: 15px 0 15px 0; }
+  #contact form input[type=text]::-webkit-input-placeholder {
+    padding: 15px; }
+  #contact form input[type=text]:-ms-input-placeholder {
+    padding: 15px; }
+  #contact form input[type=text]::-ms-input-placeholder {
+    padding: 15px; }
+  #contact form input[type=text]::placeholder {
+    padding: 15px; }
+
+#footer_navigation {
+  padding: 15px 0 15px 0;
+  background: #EFEFEF; }
+  #footer_navigation li:first-child {
+    padding-left: 0px; }
+
+footer {
+  padding: 20px 0 20px 0;
+  background: #07B9BB; }
+  footer .footer_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  footer .footer_social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    footer .footer_social img {
+      width: 30px; }
+  footer p, footer .header_banner_content p, .header_banner_content footer p, footer #about p, #about footer p, footer #cta .cta_container .cta_blocks p, #cta .cta_container .cta_blocks footer p, footer #progress .progress_container .progress_box p, #progress .progress_container .progress_box footer p, footer #getInvolved p, #getInvolved footer p {
+    color: #ffffff; }

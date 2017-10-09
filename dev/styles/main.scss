@@ -3,10 +3,30 @@
 //DESIGN ELEMENTS
 
 //FONT STYLES
+$headFont: 'Ubuntu', sans-serif;
+$bodyFont: 'Didact Gothic', sans-serif;
 
 //COLORS
+$pink: #EF4F9D;
+$lightPink: #F17CB4;
+$turquoise: #07B9BB;
+$white: #ffffff;
+$grey: #686868;
+$lightGrey: #EFEFEF;
 
-//@mixins
+//MIXINS
+
+//----Mixin Example
+// @mixin fontSize($sizeValue) {
+// 	font-size: $sizeValue;
+// 	color: blue;
+// 	font-weight: bold;
+// }
+
+// h1 {
+// 	@include fontSize(34px);
+// }
+//----Mixin Example
 
 //COMMON STYLES
 
@@ -14,31 +34,45 @@ html{
 	font-size: 62.5%;
 }
 
+ul {
+	padding: 0px;
+}
+
 h1,
 h2,
 h3,
 h4,
-h5,
-p {
+h5 {
+	font-family: $headFont;
+	font-weight: 300;
+}
+
+p,
+a {
 	margin: 0;
-	padding: 0;
-	font-family: 'Julius Sans One', sans-serif;
+	padding: 10px 0 10px 0;
+	font-family: $bodyFont;
+	color: $grey;
+	font-size: 1.4rem;
+	line-height: 2.5rem;
 }
 
-h1, h2, h3{
-	color: #EF4F9D;
+button {
+	background-color: $turquoise;	
+	color: $white;
+	font-size: 1.5rem;
+	padding: 10px;
+	font-family: $bodyFont;
 }
 
-h2{
-	font-size: 3em;
-	margin: 20px 0 20px 0;
-}
+// h1, h2, h3{
+// 	color: $pink;
+// }
 
-p{
-	font-size: 20px;
-	line-height: 30px;
-}
-
+// h2{
+// 	font-size: 3em;
+// 	margin: 20px 0 20px 0;
+// }
 
 i{
 	// color: #70C3E1;
@@ -51,48 +85,55 @@ a{
 	// display: inline-block
 }
 
-.header_banner_content button {
-	background-color: #07B9BB;	
-	border: none;
-	color: white;
+.header_banner_content {
+	button {
+	@extend button;
+	border: 2px solid $white;
+	}
 }
 
 .nav_bar {
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 li {
 	list-style: none;
-	padding: 0 10px 0 10px;
+	padding: 0 15px 0 15px;
+	display: inline-block;
 }
 
-li a {
-	color: #EF4F9D;
+li {
+	a {
+		color: $pink;
+		display: inline-block;
+		font-size: 1.6rem;
+	}
 }
 
-li a:hover {
-	color: #07B9BB;
-	text-decoration: none;
+li {
+	a:hover {
+		color: $turquoise;
+		text-decoration: none;
+	}
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
-.logo img {
-	max-width: 60px;
-	padding-top: 20px;
-	text-align: center;
+.logo {
+	img {
+		max-width: 60px;
+		padding-top: 20px;
+		text-align: center;
+	}
 }
 
 .header_nav {
 	display: flex;	
 	justify-content: space-between;
-}
-
-.nav_bar {
-	display: flex;
+	padding-bottom: 10px;
 }
 
 .header_banner {
@@ -101,7 +142,6 @@ li a:hover {
 	background-size: cover;
 	max-width: 100%;
 	padding-top: 10%;
-	height: 600px;
 }
 
 .logo_banner_overlay {
@@ -113,10 +153,247 @@ li a:hover {
 	margin: 0 auto;
 	padding: 2%;
 	text-align: left;
-	margin-bottom: 15%;
+	margin-bottom: 10%;
 	background-color: rgba(7, 2, 2, 0.5);
+	h1 {
+		@extend h1;
+		color: $white;
+		font-size: 4rem;
+		margin-top: 0px;
+	}
+	p {
+		@extend p;
+		color: $white;
+		padding: 10px 0 10px 0;
+	}
 }
 
-.header_banner_content h1, p {
-	color: white;
+#about {
+	padding: 30px 0 30px 0;
+	h1 {
+		@extend h1;
+		color: $turquoise;
+		font-family: $headFont;
+		text-align: center;
+	}
+	p {
+		@extend p;
+		text-align: center;
+	}
+}
+
+#cta {
+	background-color: $lightGrey;
+	.cta_container {
+		display: flex;
+		padding: 50px 0 50px 0;
+		.cta_blocks {
+			text-align: center;
+			max-width: 25%;
+			img {
+				width: 50px;
+			}
+			h3 {
+				@extend h3;
+				font-size: 1.8rem;
+				color: $turquoise;
+			}
+			p{
+				@extend p;
+				// font-size: 1.4rem;
+			}
+			button {
+				@extend button;
+				border: none;
+				width: 90px;
+			}
+		}
+	}
+}
+
+#quote {
+	background-color: $lightPink;
+	.container {
+		padding: 50px 0 50px 0;
+		h1 {
+			@extend h1;
+			text-align: center;
+			color: $white;
+			font-size: 3rem;
+			text-transform: uppercase;
+		}
+		p {
+			padding-top: 20px;
+			font-size: 2rem;
+			text-align: center;
+			color: white;
+		}
+	}
+}
+
+#galleryTitle {
+	h1 {
+		@extend h1;
+		color: $turquoise;
+		text-align: center;
+		padding: 40px 0 40px 0;
+	}
+}
+
+#gallery {
+	.gallery_image_container {
+		display: flex;
+		flex-wrap: wrap;
+		.gallery_image {
+			width: 25%;
+			height: 250px;
+		}
+	}
+}
+
+#gallery {
+	.gallery_image1 {
+		background: url(../../images/amanda_flores.jpg) no-repeat center;
+		background-size: cover;
+	}
+	.gallery_image2 {
+		background: url(../../images/balta_angie.jpg) no-repeat center top;
+		background-size: cover;
+	}
+	.gallery_image3 {
+		background: url(../../images/brad_fanny.jpg) no-repeat center bottom;
+		background-size: cover;
+	}
+	.gallery_image4 {
+		background: url(../../images/april_group.jpg) no-repeat center;
+		background-size: cover;
+	}
+	.gallery_image5 {
+		background: url(../../images/elly_april.jpg) no-repeat center;
+		background-size: cover;
+	}
+	.gallery_image6 {
+		background: url(../../images/gerry.jpg) no-repeat center;
+		background-size: cover;
+	}
+	.gallery_image7 {
+		background: url(../../images/jose_surf.jpg) no-repeat center;
+		background-size: cover;
+	}
+	.gallery_image8 {
+		background: url(../../images/surf_camp.jpg) no-repeat center;
+		background-size: cover;
+	}
+}
+
+#progress {
+	padding: 40px 0 40px 0;
+	h1 {
+		@extend h1;
+		text-align: center;
+		font-size: 3rem;
+		color: $turquoise;
+	}
+	.progress_container {
+		padding: 20px 0 20px 0;
+		display: flex;
+		.progress_box {
+			width: 33.3%;
+			h1 {
+				@extend h1;
+				font-size: 4.5rem;
+				color: $pink;
+			}
+			p {
+				@extend p;
+				font-size: 2rem;
+				text-align: center;
+				color: $turquoise;
+			}
+		}
+	}
+}
+
+#getInvolved {
+	background-color: $turquoise;
+	padding: 40px 0 40px 0;
+	h1 {
+		@extend h1;
+		color: $white;
+	}
+	p {
+		@extend p;
+		color: $white;
+	}
+	a {
+		color: $pink;
+	}
+}
+
+#contact {
+	padding: 40px 0 40px 0;
+	h1 {
+		@extend h1;
+		color: $turquoise;
+	}
+	form {
+		.input_fields {
+			display: flex;
+			justify-content: space-between;
+		}
+		input {
+			width: 49%;
+			background-color: $lightGrey;
+			color: $grey;
+			border: none;
+			margin: 15px 0 0px 0;
+			font-size: 2rem;
+		}
+		textarea {
+			width: 100%;
+			margin-top: 15px;
+			background-color: $lightGrey;
+			color: $grey;
+			font-size: 2rem;
+			border: none;
+		}
+		input[type=submit] {
+			width: 20%;
+			background-color: $turquoise;
+			color: $white;
+			padding: 10px;
+			margin: 15px 0 15px 0;
+		}
+		input[type=text] {
+			&::placeholder {
+				padding: 15px;
+			}
+		}
+	}
+}
+
+#footer_navigation {
+	padding: 15px 0 15px 0;
+	background: $lightGrey;
+	li:first-child {
+		padding-left: 0px;
+	}
+}
+
+footer {
+	padding: 20px 0 20px 0;
+	background: $turquoise;
+	.footer_container {
+		display: flex;
+		justify-content: space-between;
+	}
+	.footer_social {
+		display: flex;
+		img {
+			width: 30px;
+		}
+	}
+	p {
+		color: $white;
+	}
 }
